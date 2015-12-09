@@ -3,7 +3,7 @@ FROM csanchez/jenkins-slave
 USER root
 
 RUN apt-get update && apt-get install -y php5 php5-cli php5-curl php5-json \
-    && php5-mcrypt php5-sqlite php5-xdebug php5-redis \
+    && php5-mcrypt php5-sqlite php5-xdebug php5-imagick php5-redis \
     && curl -O https://phar.phpunit.de/phpunit.phar \
     && chmod +x phpunit.phar \
     && mv phpunit.phar /usr/local/bin/phpunit \
